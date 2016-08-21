@@ -24,7 +24,8 @@ def poster():
     chunks = (phrase.strip() for line in lines for phrase in line.split("  "))
     # # drop blank lines
     text = '\n'.join(chunk for chunk in chunks if chunk)
-    return ner_finder(text)
+    # return ner_finder(text)
+    return jsonify(ner_finder(text))
 
 
 @app.route('/', methods=['GET'])
