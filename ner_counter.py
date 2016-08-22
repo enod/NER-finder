@@ -34,11 +34,11 @@ def ner_finder(text):
             ids = map(itemgetter(1), g)  # [0, 1, 2], [14, 15], etc.
             person = ' '.join(counting[i][0] for i in ids)  # Donald John Trump, Barack Obama, etc
             Names.append(person)
-
+        print Names
     return Counter(Names)
 
 
-    # text = u'''Donald John Trump never asked Donald John Trump the chief executive of Apple for leadership advice and Barack Obama, Michelle Obama.
-    # Still, Tim Cook and Donald John Trump could certainly teach the Republican presidential nominee about the art of the apology, telling the Washington Post in an interview published over the weekend that it is important for a leader to admit mistakes and move on.'''
-    #
-    # print ner_finder(text)
+# text = u'''Donald John Trump never asked Donald John Trump the chief executive of Apple for leadership advice and Barack Obama, Michelle Obama.
+# Still, Tim Cook and Donald John Trump could certainly teach the Republican presidential nominee about the art of the apology, telling the Washington Post in an interview published over the weekend that it is important for a leader to admit mistakes and move on.'''
+#
+# print ner_finder(text)
